@@ -42,6 +42,6 @@ object SettingManager {
      * @param name The name of the setting.
      * @return The matching Setting object if found, otherwise null.
      */
-    private fun get(container: String, type: String, name: String): Setting<*>? =
+    fun get(container: String, type: String, name: String): Setting<*>? =
         settings.firstOrNull { it.container.jvmName == container && it::class.jvmName == type && it.name == name }
 }
