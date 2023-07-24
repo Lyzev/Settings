@@ -19,6 +19,7 @@ $dokka.location:dev.lyzev.api.settings/Setting/name/#/PointingToDeclaration/-se
 $dokka.location:dev.lyzev.api.settings/Setting/setValue/#kotlin.Any#kotlin.reflect.KProperty[*]#TypeParam(bounds=[kotlin.Any?])/PointingToDeclaration/-settings/dev.lyzev.api.settings/-setting/set-value.html
 $dokka.location:dev.lyzev.api.settings/Setting/value/#/PointingToDeclaration/-settings/dev.lyzev.api.settings/-setting/value.html
 $dokka.location:dev.lyzev.api.settings/SettingManager///PointingToDeclaration/-settings/dev.lyzev.api.settings/-setting-manager/index.html
+$dokka.location:dev.lyzev.api.settings/SettingManager/get/#kotlin.String#kotlin.String#kotlin.String/PointingToDeclaration/-settings/dev.lyzev.api.settings/-setting-manager/get.html
 $dokka.location:dev.lyzev.api.settings/SettingManager/get/#kotlin.reflect.KClass[*]#kotlin.String/PointingToDeclaration/-settings/dev.lyzev.api.settings/-setting-manager/get.html
 $dokka.location:dev.lyzev.api.settings/SettingManager/get/#kotlin.reflect.KClass[*]/PointingToDeclaration/-settings/dev.lyzev.api.settings/-setting-manager/get.html
 $dokka.location:dev.lyzev.api.settings/SettingManager/settings/#/PointingToDeclaration/-settings/dev.lyzev.api.settings/-setting-manager/settings.html
