@@ -1,0 +1,19 @@
+{
+  "total": 1,
+  "tools inspection": {
+    "Code Inspection": 1
+  },
+  "linter": "QDJVMC",
+  "attributes": {
+    "vcs": {
+      "sarifIdea": {
+        "repositoryUri": "https://github.com/Lyzev/Settings.git",
+        "revisionId": "97dc251c8e96f8822cfd0e65b59d760f1cde7448",
+        "branch": "refs/heads/master"
+      }
+    },
+    "deviceId": "200820300000000-b38d-8e97-d441-a450bd3b185d",
+    "jobUrl": "https://github.com/Lyzev/Settings/actions/runs/5648243517",
+    "repoUrl": "https://github.com/Lyzev/Settings.git"
+  }
+}

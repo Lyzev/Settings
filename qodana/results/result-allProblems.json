@@ -1,0 +1,32 @@
+{"version":"3","listProblem":[{
+  "tool": "Code Inspection",
+  "category": "Probable bugs",
+  "type": "Unresolved reference in KDoc",
+  "tags": [
+    "kotlin"
+  ],
+  "severity": "High",
+  "comment": "Cannot resolve symbol 'SettingManager'",
+  "detailsInfo": "Reports unresolved references in KDoc comments.\n\n**Example:**\n\n\n      /**\n       * [unresolvedLink]\n       */\n      fun foo() {}\n\nTo fix the problem make the link valid.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "src/main/kotlin/dev.lyzev.api/settings/Setting.kt",
+      "language": "kotlin",
+      "line": 64,
+      "offset": 52,
+      "length": 14,
+      "code": {
+        "startLine": 62,
+        "length": 14,
+        "offset": 60,
+        "surroundingCode": "\n    /**\n     * Initialize the setting by adding it to the [SettingManager] for tracking.\n     */\n    init {"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "Settings.main",
+    "inspectionName": "KDocUnresolvedReference"
+  },
+  "hash": "7f1e8ef180f26dfce927b83289eced5f30203aebfd4acc1432cbbc2a99f4d758"
+}]}
