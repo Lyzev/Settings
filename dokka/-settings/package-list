@@ -13,10 +13,10 @@ $dokka.location:dev.lyzev.api.settings/Setting.Companion/notIn/kotlin.reflect.KP
 $dokka.location:dev.lyzev.api.settings/Setting///PointingToDeclaration/-settings/dev.lyzev.api.settings/-setting/index.html
 $dokka.location:dev.lyzev.api.settings/Setting/Setting/#kotlin.reflect.KClass[*]#kotlin.String#TypeParam(bounds=[kotlin.Any?])#kotlin.Function0[kotlin.Boolean]#kotlin.Function1[TypeParam(bounds=[kotlin.Any?]),kotlin.Unit]/PointingToDeclaration/-settings/dev.lyzev.api.settings/-setting/-setting.html
 $dokka.location:dev.lyzev.api.settings/Setting/container/#/PointingToDeclaration/-settings/dev.lyzev.api.settings/-setting/container.html
-$dokka.location:dev.lyzev.api.settings/Setting/getValue/#kotlin.Any#kotlin.reflect.KProperty[*]/PointingToDeclaration/-settings/dev.lyzev.api.settings/-setting/get-value.html
+$dokka.location:dev.lyzev.api.settings/Setting/getValue/#TypeParam(bounds=[kotlin.Any?])?#kotlin.reflect.KProperty[*]/PointingToDeclaration/-settings/dev.lyzev.api.settings/-setting/get-value.html
 $dokka.location:dev.lyzev.api.settings/Setting/isHidden/#/PointingToDeclaration/-settings/dev.lyzev.api.settings/-setting/is-hidden.html
 $dokka.location:dev.lyzev.api.settings/Setting/name/#/PointingToDeclaration/-settings/dev.lyzev.api.settings/-setting/name.html
-$dokka.location:dev.lyzev.api.settings/Setting/setValue/#kotlin.Any#kotlin.reflect.KProperty[*]#TypeParam(bounds=[kotlin.Any?])/PointingToDeclaration/-settings/dev.lyzev.api.settings/-setting/set-value.html
+$dokka.location:dev.lyzev.api.settings/Setting/setValue/#TypeParam(bounds=[kotlin.Any?])?#kotlin.reflect.KProperty[*]#TypeParam(bounds=[kotlin.Any?])/PointingToDeclaration/-settings/dev.lyzev.api.settings/-setting/set-value.html
 $dokka.location:dev.lyzev.api.settings/Setting/value/#/PointingToDeclaration/-settings/dev.lyzev.api.settings/-setting/value.html
 $dokka.location:dev.lyzev.api.settings/SettingManager///PointingToDeclaration/-settings/dev.lyzev.api.settings/-setting-manager/index.html
 $dokka.location:dev.lyzev.api.settings/SettingManager/get/#kotlin.String#kotlin.String#kotlin.String/PointingToDeclaration/-settings/dev.lyzev.api.settings/-setting-manager/get.html
