@@ -85,7 +85,7 @@ dependencies {
 ### Example
 
 <details>
-        <summary>TestEvent</summary>
+        <summary>TestSetting</summary>
 
 ```kt
 import dev.lyzev.api.settings.Setting
