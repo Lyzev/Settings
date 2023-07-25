@@ -1,1 +1,225 @@
-{"version":"3","listProblem":[]}
+{"version":"3","listProblem":[{
+  "tool": "Code Inspection",
+  "category": "Redundant constructs",
+  "type": "Unused symbol",
+  "severity": "High",
+  "comment": "Function \"leq\" is never used",
+  "detailsInfo": "Reports symbols that are not used or not reachable from entry points.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "src/main/kotlin/dev.lyzev.api/settings/Setting.kt",
+      "language": "kotlin",
+      "line": 128,
+      "offset": 52,
+      "length": 3,
+      "code": {
+        "startLine": 126,
+        "length": 3,
+        "offset": 160,
+        "surroundingCode": "         * @return A lambda function that returns true if the condition is met, false otherwise.\n         */\n        infix fun <T : Comparable<T>> KProperty<T>.leq(value: T): () -> Boolean = { getter.call() <= value }\n\n        /**"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "Settings.main",
+    "inspectionName": "UnusedSymbol"
+  },
+  "hash": "0de1b9d5c8a1ea4c41514d504aeb231daa95b1eb7c4a2272f544ac0974787c28"
+},{
+  "tool": "Code Inspection",
+  "category": "Redundant constructs",
+  "type": "Unused symbol",
+  "severity": "High",
+  "comment": "Function \"notIn\" is never used",
+  "detailsInfo": "Reports symbols that are not used or not reachable from entry points.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "src/main/kotlin/dev.lyzev.api/settings/Setting.kt",
+      "language": "kotlin",
+      "line": 104,
+      "offset": 48,
+      "length": 5,
+      "code": {
+        "startLine": 102,
+        "length": 5,
+        "offset": 156,
+        "surroundingCode": "         * @return A lambda function that returns true if the condition is met, false otherwise.\n         */\n        infix fun <T> KProperty<Collection<T>>.notIn(value: T): () -> Boolean = { value !in getter.call() }\n\n        /**"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "Settings.main",
+    "inspectionName": "UnusedSymbol"
+  },
+  "hash": "0f0c8a5aba0c1f8b337deff688e8d87f445f1d5b6f6969fb05af2a33fde80454"
+},{
+  "tool": "Code Inspection",
+  "category": "Redundant constructs",
+  "type": "Unused symbol",
+  "severity": "High",
+  "comment": "Function \"gt\" is never used",
+  "detailsInfo": "Reports symbols that are not used or not reachable from entry points.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "src/main/kotlin/dev.lyzev.api/settings/Setting.kt",
+      "language": "kotlin",
+      "line": 120,
+      "offset": 52,
+      "length": 2,
+      "code": {
+        "startLine": 118,
+        "length": 2,
+        "offset": 160,
+        "surroundingCode": "         * @return A lambda function that returns true if the condition is met, false otherwise.\n         */\n        infix fun <T : Comparable<T>> KProperty<T>.gt(value: T): () -> Boolean = { getter.call() > value }\n\n        /**"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "Settings.main",
+    "inspectionName": "UnusedSymbol"
+  },
+  "hash": "709c37081a08bd47fec71b577f78c21b2c25c8d93187c1c492081e24e645ee0a"
+},{
+  "tool": "Code Inspection",
+  "category": "Redundant constructs",
+  "type": "Unused symbol",
+  "severity": "High",
+  "comment": "Function \"neq\" is never used",
+  "detailsInfo": "Reports symbols that are not used or not reachable from entry points.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "src/main/kotlin/dev.lyzev.api/settings/Setting.kt",
+      "language": "kotlin",
+      "line": 88,
+      "offset": 36,
+      "length": 3,
+      "code": {
+        "startLine": 86,
+        "length": 3,
+        "offset": 144,
+        "surroundingCode": "         * @return A lambda function that returns true if the condition is met, false otherwise.\n         */\n        infix fun <T> KProperty<T>.neq(value: T): () -> Boolean = { getter.call() != value }\n\n        /**"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "Settings.main",
+    "inspectionName": "UnusedSymbol"
+  },
+  "hash": "93c3761dfabb576ab98a0eadc646dac05674c181fe0e6c92fcca53233ad533e4"
+},{
+  "tool": "Code Inspection",
+  "category": "Redundant constructs",
+  "type": "Unused symbol",
+  "severity": "High",
+  "comment": "Function \"lt\" is never used",
+  "detailsInfo": "Reports symbols that are not used or not reachable from entry points.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "src/main/kotlin/dev.lyzev.api/settings/Setting.kt",
+      "language": "kotlin",
+      "line": 112,
+      "offset": 52,
+      "length": 2,
+      "code": {
+        "startLine": 110,
+        "length": 2,
+        "offset": 160,
+        "surroundingCode": "         * @return A lambda function that returns true if the condition is met, false otherwise.\n         */\n        infix fun <T : Comparable<T>> KProperty<T>.lt(value: T): () -> Boolean = { getter.call() < value }\n\n        /**"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "Settings.main",
+    "inspectionName": "UnusedSymbol"
+  },
+  "hash": "a83c27e3fb7f2d5debb2b7b376a34df47ad600b793cb37fb7e8f0ab8c1403029"
+},{
+  "tool": "Code Inspection",
+  "category": "Redundant constructs",
+  "type": "Unused symbol",
+  "severity": "High",
+  "comment": "Function \"eq\" is never used",
+  "detailsInfo": "Reports symbols that are not used or not reachable from entry points.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "src/main/kotlin/dev.lyzev.api/settings/Setting.kt",
+      "language": "kotlin",
+      "line": 80,
+      "offset": 36,
+      "length": 2,
+      "code": {
+        "startLine": 78,
+        "length": 2,
+        "offset": 144,
+        "surroundingCode": "         * @return A lambda function that returns true if the condition is met, false otherwise.\n         */\n        infix fun <T> KProperty<T>.eq(value: T): () -> Boolean = { getter.call() == value }\n\n        /**"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "Settings.main",
+    "inspectionName": "UnusedSymbol"
+  },
+  "hash": "ada9af6b00c5185844f459a9af7070d35d9f5391c24640643abdfd90aec81ed5"
+},{
+  "tool": "Code Inspection",
+  "category": "Redundant constructs",
+  "type": "Unused symbol",
+  "severity": "High",
+  "comment": "Function \"geq\" is never used",
+  "detailsInfo": "Reports symbols that are not used or not reachable from entry points.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "src/main/kotlin/dev.lyzev.api/settings/Setting.kt",
+      "language": "kotlin",
+      "line": 136,
+      "offset": 52,
+      "length": 3,
+      "code": {
+        "startLine": 134,
+        "length": 3,
+        "offset": 160,
+        "surroundingCode": "         * @return A lambda function that returns true if the condition is met, false otherwise.\n         */\n        infix fun <T : Comparable<T>> KProperty<T>.geq(value: T): () -> Boolean = { getter.call() >= value }\n    }\n}"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "Settings.main",
+    "inspectionName": "UnusedSymbol"
+  },
+  "hash": "bff4c7b5cd55567223b48c039311965bc3b1f22fc2a288609835d2248dd939ba"
+},{
+  "tool": "Code Inspection",
+  "category": "Redundant constructs",
+  "type": "Unused symbol",
+  "severity": "High",
+  "comment": "Function \"isIn\" is never used",
+  "detailsInfo": "Reports symbols that are not used or not reachable from entry points.",
+  "sources": [
+    {
+      "type": "file",
+      "path": "src/main/kotlin/dev.lyzev.api/settings/Setting.kt",
+      "language": "kotlin",
+      "line": 96,
+      "offset": 48,
+      "length": 4,
+      "code": {
+        "startLine": 94,
+        "length": 4,
+        "offset": 156,
+        "surroundingCode": "         * @return A lambda function that returns true if the condition is met, false otherwise.\n         */\n        infix fun <T> KProperty<Collection<T>>.isIn(value: T): () -> Boolean = { value in getter.call() }\n\n        /**"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "Settings.main",
+    "inspectionName": "UnusedSymbol"
+  },
+  "hash": "c94bd612c58fecc059d1acf9f545ed82465a6a9e1501d5916efd43386eaa10cf"
+}]}
