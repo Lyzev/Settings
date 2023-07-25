@@ -7,7 +7,7 @@ plugins {
 }
 
 group = "dev.lyzev.api"
-version = "0.0.2"
+version = "0.0.3"
 
 repositories {
     mavenCentral()
@@ -39,7 +39,7 @@ publishing {
         create<MavenPublication>("maven") {
             groupId = "dev.lyzev.api"
             artifactId = "settings"
-            version = "0.0.2"
+            version = "0.0.3"
             from(components["java"])
         }
     }

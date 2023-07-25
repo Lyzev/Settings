@@ -17,20 +17,20 @@ import kotlin.reflect.KClass
  * @param hide A lambda function that determines whether this setting is hidden or not.
  * @param change A lambda function that will be called when the value of the setting changes.
  */
-class TestSetting(
+class BooleanSetting(
     container: KClass<*>, name: String, value: Boolean, hide: () -> Boolean = { false }, change: (Boolean) -> Unit = {}
 ) : Setting<Boolean>(container, name, value, hide, change)
 
 fun main() {
     // Create an instance of TestSetting with initial values.
-    val setting = TestSetting(TestSetting::class, "test", true)
+    var setting by BooleanSetting(BooleanSetting::class, "test", true) { println("Setting changed to $it") }
 
     // Print the initial value of the setting.
-    println(setting.value)
+    println(setting)
 
     // Change the value of the setting to 'false'.
-    setting.value = false
+    setting = false
 
     // Print the updated value of the setting.
-    println(setting.value)
+    println(setting)
 }
