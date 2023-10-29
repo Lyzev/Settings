@@ -104,18 +104,23 @@ class BooleanSetting(
     container: KClass<*>, name: String, value: Boolean, hide: () -> Boolean = { false }, change: (Boolean) -> Unit = {}
 ) : Setting<Boolean>(container, name, value, hide, change)
 
+class Test {
+    companion object {
+        var setting by BooleanSetting(BooleanSetting::class, "test", true) { println("Setting changed to $it") }
+    }
+}
+
 fun main() {
     // Create an instance of TestSetting with initial values.
-    var setting by BooleanSetting(BooleanSetting::class, "test", true) { println("Setting changed to $it") }
 
     // Print the initial value of the setting.
-    println(setting)
+    println(Test.setting)
 
     // Change the value of the setting to 'false'.
-    setting = false
+    Test.setting = false
 
     // Print the updated value of the setting.
-    println(setting)
+    println(Test.setting)
 }
 ```
 

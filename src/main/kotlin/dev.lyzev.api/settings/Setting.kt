@@ -38,7 +38,7 @@ abstract class Setting<T>(
      * @param prop The property for which the value is requested (unused).
      * @return The current value of the setting.
      */
-    open operator fun getValue(ref: T?, prop: KProperty<*>): T = value
+    open operator fun getValue(ref: Any, prop: KProperty<*>): T = value
 
     /**
      * Set the value of the setting.
@@ -48,7 +48,7 @@ abstract class Setting<T>(
      * @param prop The property for which the value is being set (unused).
      * @param value The new value to set for the setting.
      */
-    open operator fun setValue(ref: T?, prop: KProperty<*>, value: T) {
+    open operator fun setValue(ref: Any, prop: KProperty<*>, value: T) {
         this.value = value
     }
 
