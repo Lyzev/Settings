@@ -16,6 +16,7 @@ import kotlin.reflect.KProperty
 abstract class Setting<T>(
     val container: KClass<*>,
     val name: String,
+    val desc: String? = null,
     value: T,
     private val hidden: () -> Boolean = { false },
     protected val onChange: (T) -> Unit = {}
