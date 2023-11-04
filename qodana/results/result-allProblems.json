@@ -13,11 +13,11 @@
       "type": "file",
       "path": "src/main/kotlin/dev.lyzev.api/settings/Setting.kt",
       "language": "kotlin",
-      "line": 64,
+      "line": 65,
       "offset": 52,
       "length": 14,
       "code": {
-        "startLine": 62,
+        "startLine": 63,
         "length": 14,
         "offset": 60,
         "surroundingCode": "\n    /**\n     * Initialize the setting by adding it to the [SettingManager] for tracking.\n     */\n    init {"
@@ -28,5 +28,5 @@
     "module": "Settings.main",
     "inspectionName": "KDocUnresolvedReference"
   },
-  "hash": "71cd9f13b3841e206a7bddcd77924291103b9e266fc30bf6adf4cb6c4a9a8837"
+  "hash": "7c25f54e57b40cd71009c97c20a704419a974029d91eca4115cdeb8630256e06"
 }]}

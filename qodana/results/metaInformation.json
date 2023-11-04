@@ -8,12 +8,12 @@
     "vcs": {
       "sarifIdea": {
         "repositoryUri": "https://github.com/Lyzev/Settings.git",
-        "revisionId": "59cabc5b2b3dd114ecf1e6f27136d876c3fe5045",
+        "revisionId": "cd48e0040e0a8bd61fa5e2c515eef258f32e1034",
         "branch": "refs/heads/master"
       }
     },
     "deviceId": "200820300000000-b38d-8e97-d441-a450bd3b185d",
-    "jobUrl": "https://github.com/Lyzev/Settings/actions/runs/6685368211",
+    "jobUrl": "https://github.com/Lyzev/Settings/actions/runs/6751908097",
     "repoUrl": "https://github.com/Lyzev/Settings.git"
   }
 }
