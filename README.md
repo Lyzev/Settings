@@ -88,7 +88,7 @@ dependencies {
         <summary>Example Boolean Setting</summary>
 
 ```kt
-import dev.lyzev.api.settings.Setting
+import dev.lyzev.api.setting.Setting
 import kotlin.reflect.KClass
 
 /**
@@ -129,10 +129,6 @@ fun main() {
 ## Documentation
 
 You can find the documentation [here](https://lyzev.github.io/Settings/dokka).
-
-## Code Quality Monitoring
-
-You can find the qodana report [here](https://lyzev.github.io/Settings/qodana).
 
 ## Bugs and Suggestions
 

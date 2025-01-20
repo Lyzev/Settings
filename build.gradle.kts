@@ -1,8 +1,5 @@
-import org.jetbrains.dokka.gradle.DokkaTask
-
 plugins {
     alias(libs.plugins.kotlin)
-    alias(libs.plugins.dokka)
     `maven-publish`
 }
 
@@ -20,10 +17,6 @@ dependencies {
 
 kotlin {
     jvmToolchain((project.extra["java_version"] as String).toInt())
-}
-
-tasks.getByName<DokkaTask>("dokkaHtml") {
-    outputDirectory.set(buildDir.resolve("dokkaHtmlOutput"))
 }
 
 tasks.compileKotlin {

@@ -1,4 +1,4 @@
-package dev.lyzev.api.settings
+package dev.lyzev.api.setting
 
 import kotlin.reflect.KClass
 import kotlin.reflect.KProperty

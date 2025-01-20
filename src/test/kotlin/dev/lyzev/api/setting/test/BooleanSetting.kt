@@ -3,9 +3,9 @@
  * All rights reserved.
  */
 
-package dev.lyzev.api.settings.test
+package dev.lyzev.api.setting.test
 
-import dev.lyzev.api.settings.Setting
+import dev.lyzev.api.setting.Setting
 import kotlin.reflect.KClass
 
 /**
