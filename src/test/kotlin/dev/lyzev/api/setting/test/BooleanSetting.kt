@@ -19,7 +19,7 @@ import kotlin.reflect.KClass
  */
 class BooleanSetting(
     container: KClass<*>, name: String, value: Boolean, hide: () -> Boolean = { false }, change: (Boolean) -> Unit = {}
-) : Setting<Boolean>(container, name, value, hide, change)
+) : Setting<Boolean>(container, name, null, value, hide, change)
 
 class Test {
     companion object {
