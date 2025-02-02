@@ -14,7 +14,7 @@
 
 ## Usage
 
-[![](https://jitpack.io/v/SchizoidDevelopment/kratos.svg?label=Release)](https://jitpack.io/#SchizoidDevelopment/kratos)
+[![Maven Central Version](https://img.shields.io/maven-central/v/dev.lyzev.api/kratos)](https://central.sonatype.com/artifact/dev.lyzev.api/kratos)
 
 ### Import
 
@@ -25,11 +25,11 @@ Replace `${version}` with the current version!
 
 ```kt
 repositories {
-    maven("https://jitpack.io")
+    mavenCentral()
 }
 
 dependencies {
-    implementation("com.github.Lyzev:Settings:${version}")
+    implementation("dev.lyzev.api", "kratos", "${version}")
 }
 ```
 
@@ -40,11 +40,11 @@ dependencies {
 
 ```groovy
 repositories {
-    maven { url 'https://jitpack.io' }
+    mavenCentral()
 }
 
 dependencies {
-    implementation 'com.github.Lyzev:Settings:${version}'
+    implementation 'dev.lyzev.api:kratos:${version}'
 }
 ```
 
@@ -54,18 +54,10 @@ dependencies {
         <summary>Maven</summary>
 
 ```xml
-
-<repositories>
-    <repository>
-        <id>jitpack.io</id>
-        <url>https://jitpack.io</url>
-    </repository>
-</repositories>
-
 <dependencies>
 <dependency>
-    <groupId>com.github.Lyzev</groupId>
-    <artifactId>Settings</artifactId>
+    <groupId>dev.lyzev.api</groupId>
+    <artifactId>kratos</artifactId>
     <version>${version}</version>
 </dependency>
 </dependencies>
@@ -76,16 +68,13 @@ dependencies {
 <details>
         <summary>Raw Jar</summary>
 
-1. Go to the [release page](https://github.com/SchizoidDevelopment/kratos/releases).
-2. Download Settings-${version}.jar.
-3. Add the jar to your classpath.
+1. Go to the [Maven Central Repository](https://search.maven.org/artifact/dev.lyzev.api/kratos) and download the JAR file from the version you want.
+2. Add the JAR file to your project.
+3. Done!
 
 </details>
 
 ### Example
-
-<details>
-        <summary>Example Boolean Setting</summary>
 
 ```kt
 import dev.lyzev.api.setting.Setting
@@ -102,12 +91,10 @@ import kotlin.reflect.KClass
  */
 class BooleanSetting(
     container: KClass<*>, name: String, value: Boolean, hide: () -> Boolean = { false }, change: (Boolean) -> Unit = {}
-) : Setting<Boolean>(container, name, value, hide, change)
+) : Setting<Boolean>(container, name, null, value, hide, change)
 
-class Test {
-    companion object {
-        var setting by BooleanSetting(BooleanSetting::class, "test", true) { println("Setting changed to $it") }
-    }
+object Test { 
+    var setting by BooleanSetting(BooleanSetting::class, "Test", true) { println("Setting changed to $it") }
 }
 
 fun main() {
@@ -122,9 +109,6 @@ fun main() {
     // Print the updated value of the setting.
     println(Test.setting)
 }
-```
-
-</details>
 
 ## Documentation
 
