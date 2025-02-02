@@ -47,6 +47,16 @@ kotlin {
     jvmToolchain((project.extra["java_version"] as String).toInt())
 }
 
+val sourcesJar by tasks.registering(Jar::class) {
+    archiveClassifier.set("sources")
+    from(sourceSets.main.get().allSource)
+}
+
+val javadocJar by tasks.registering(Jar::class) {
+    archiveClassifier.set("javadoc")
+    from(tasks.javadoc)
+}
+
 dokka {
     moduleName.set("Kratos")
     dokkaSourceSets.main {
@@ -100,6 +110,8 @@ publishing {
             artifactId = project.extra["maven_artifact"] as String
             version = project.extra["maven_version"] as String
             from(components["java"])
+            artifact(sourcesJar.get())
+            artifact(javadocJar.get())
             pom {
                 name = "Kratos"
                 description = "A flexible Kotlin library for seamless management and tracking of customizable application settings. Simplify the process of integrating user-configurable options into your projects."
