@@ -10,6 +10,7 @@ on:
       GPG_KEY:
         required: true
       MAVEN_USER_TOKEN:
+
 jobs:
   build:
     runs-on: ubuntu-latest
