@@ -113,14 +113,14 @@ fun main() {
 
 ## Documentation
 
-You can find the documentation [here](https://lyzev.github.io/Settings/dokka).
+You can find the documentation [here](https://schizoiddevelopment.github.io/kratos/).
 
 ## Bugs and Suggestions
 
 ### Discord
 
 For assistance with minor concerns, feel free to join our supportive community on
-the [Discord server](https://lyzev.github.io/discord). Our friendly members and staff are ready to help you.
+the [Discord server](https://lyzev.dev/discord). Our friendly members and staff are ready to help you.
 
 ### GitHub
 
