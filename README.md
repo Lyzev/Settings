@@ -109,6 +109,7 @@ fun main() {
     // Print the updated value of the setting.
     println(Test.setting)
 }
+```
 
 ## Documentation
 
