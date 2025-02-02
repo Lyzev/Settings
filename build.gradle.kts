@@ -70,6 +70,19 @@ tasks.withType<KotlinCompile>().configureEach {
     }
 }
 
+tasks.register("publishToMavenCentral") {
+    dependsOn("publishMavenPublicationToLocalRepository")
+
+    doLast {
+        exec {
+            commandLine("sh", "-c", "cd build/repo && zip -r ../../build.zip ./*")
+        }
+        exec {
+            commandLine("sh", "-c", "curl --request POST --verbose --header 'Authorization: Bearer ${System.getenv("MAVEN_PASSWORD")}' --form bundle=@build.zip https://central.sonatype.com/api/v1/publisher/upload")
+        }
+    }
+}
+
 signing {
     useGpgCmd()
 }
@@ -77,12 +90,8 @@ signing {
 publishing {
     repositories {
         maven {
-            name = "OSSRH"
-            url = URI("https://oss.sonatype.org/service/local/staging/deploy/maven2/")
-            credentials {
-                username = System.getenv("MAVEN_USERNAME")
-                password = System.getenv("MAVEN_PASSWORD")
-            }
+            name = "Local"
+            url = URI("file://${project.layout.buildDirectory.get()}/repo")
         }
     }
     publications {
