@@ -12,4 +12,4 @@ jobs:
       contents: write
     secrets:
       GPG_KEY: ${{ secrets.GPG_KEY }}
-      MAVEN_PASSWORD: ${{ secrets.MAVEN_PASSWORD }}
+      MAVEN_USER_TOKEN: ${{ secrets.MAVEN_USER_TOKEN }}

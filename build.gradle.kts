@@ -78,7 +78,7 @@ tasks.register("publishToMavenCentral") {
             commandLine("sh", "-c", "cd build/repo && zip -r ../../build.zip ./*")
         }
         exec {
-            commandLine("sh", "-c", "curl --request POST --verbose --header 'Authorization: Bearer ${System.getenv("MAVEN_PASSWORD")}' --form bundle=@build.zip https://central.sonatype.com/api/v1/publisher/upload")
+            commandLine("sh", "-c", "curl --request POST --verbose --header 'Authorization: Bearer ${System.getenv("MAVEN_USER_TOKEN")}' --form bundle=@build.zip https://central.sonatype.com/api/v1/publisher/upload")
         }
     }
 }
