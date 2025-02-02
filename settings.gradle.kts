@@ -1,1 +1,1 @@
-rootProject.name = "Settings"
+rootProject.name = "Kratos"

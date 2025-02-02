@@ -1,6 +1,30 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+import java.net.URI
+
+/*
+ * This file is part of https://github.com/SchizoidDevelopment/kratos.
+ *
+ * Copyright (c) 2025. Lyzev
+ *
+ * Kratos is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as published by
+ * the Free Software Foundation, version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * Kratos is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along with Kratos. If not, see <https://www.gnu.org/licenses/>.
+ */
+
 plugins {
     alias(libs.plugins.kotlin)
+    alias(libs.plugins.dokka)
     `maven-publish`
+    signing
 }
 
 group = project.extra["maven_group"] as String
@@ -11,29 +35,84 @@ repositories {
 }
 
 dependencies {
-    // https://kotlinlang.org/docs/reflection.html
-    compileOnly(libs.kotlin.reflect)
+    testImplementation(kotlin("test"))
+}
+
+tasks.test {
+    useJUnitPlatform()
+    ignoreFailures = true
 }
 
 kotlin {
     jvmToolchain((project.extra["java_version"] as String).toInt())
 }
 
-tasks.compileKotlin {
-    kotlinOptions.jvmTarget = project.extra["java_version"] as String
+dokka {
+    moduleName.set("Kratos")
+    dokkaSourceSets.main {
+        sourceLink {
+            localDirectory.set(file("src/main/kotlin"))
+            remoteUrl("https://github.com/SchizoidDevelopment/kratos/tree/master/src/main/kotlin")
+            remoteLineSuffix.set("#L")
+        }
+    }
+    pluginsConfiguration.html {
+        footerMessage.set("Copyright (c) 2023-2025. Lyzev")
+    }
+    dokkaPublications.html {
+        outputDirectory.set(layout.buildDirectory.dir("dokkaHtmlOutput"))
+    }
 }
 
-tasks.compileTestKotlin {
-    kotlinOptions.jvmTarget = project.extra["java_version"] as String
+tasks.withType<KotlinCompile>().configureEach {
+    compilerOptions {
+        jvmTarget.set(JvmTarget.fromTarget(project.extra["java_version"] as String))
+    }
+}
+
+signing {
+    useGpgCmd()
 }
 
 publishing {
+    repositories {
+        maven {
+            name = "OSSRH"
+            url = URI("https://oss.sonatype.org/service/local/staging/deploy/maven2/")
+            credentials {
+                username = System.getenv("MAVEN_USERNAME")
+                password = System.getenv("MAVEN_PASSWORD")
+            }
+        }
+    }
     publications {
         create<MavenPublication>("maven") {
             groupId = project.extra["maven_group"] as String
             artifactId = project.extra["maven_artifact"] as String
             version = project.extra["maven_version"] as String
             from(components["java"])
+            pom {
+                name = "Kratos"
+                description = "A flexible Kotlin library for seamless management and tracking of customizable application settings. Simplify the process of integrating user-configurable options into your projects."
+                url = "https://github.com/SchizoidDevelopment/kratos"
+                licenses {
+                    license {
+                        name = "GNU Affero General Public License v3.0"
+                        url = "https://github.com/SchizoidDevelopment/kratos/blob/master/LICENSE"
+                    }
+                }
+                developers {
+                    developer {
+                        id = "Lyzev"
+                    }
+                }
+                scm {
+                    connection = "scm:git:git://github.com/SchizoidDevelopment/kratos.git"
+                    developerConnection = "scm:git:ssh://github.com/SchizoidDevelopment/kratos.git"
+                    url = "https://github.com/SchizoidDevelopment/kratos.git"
+                }
+            }
+            the<SigningExtension>().sign(this)
         }
     }
 }

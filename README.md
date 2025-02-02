@@ -1,20 +1,20 @@
-<h1 align="center">Settings</h1>
+<h1 align="center">Kratos</h1>
 
 <p align="center">A flexible Kotlin library for seamless management and tracking of customizable application settings. Simplify the process of integrating user-configurable options into your projects.</p>
 
 <div align="center">
     <a href="https://lyzev.github.io/discord"><img src="https://img.shields.io/discord/610120595765723137?logo=discord" alt="Discord"/></a>
     <br><br>
-    <img src="https://img.shields.io/github/last-commit/Lyzev/Settings" alt="GitHub last commit"/>
-    <img src="https://img.shields.io/github/commit-activity/w/Lyzev/Settings" alt="GitHub commit activity"/>
+    <img src="https://img.shields.io/github/last-commit/SchizoidDevelopment/kratos" alt="GitHub last commit"/>
+    <img src="https://img.shields.io/github/commit-activity/w/SchizoidDevelopment/kratos" alt="GitHub commit activity"/>
     <br>
-    <img src="https://img.shields.io/github/languages/code-size/Lyzev/Settings" alt="GitHub code size in bytes"/>
-    <img src="https://img.shields.io/github/contributors/Lyzev/Settings" alt="GitHub contributors"/>
+    <img src="https://img.shields.io/github/languages/code-size/SchizoidDevelopment/kratos" alt="GitHub code size in bytes"/>
+    <img src="https://img.shields.io/github/contributors/SchizoidDevelopment/kratos" alt="GitHub contributors"/>
 </div>
 
 ## Usage
 
-[![](https://jitpack.io/v/Lyzev/Settings.svg?label=Release)](https://jitpack.io/#Lyzev/Settings)
+[![](https://jitpack.io/v/SchizoidDevelopment/kratos.svg?label=Release)](https://jitpack.io/#SchizoidDevelopment/kratos)
 
 ### Import
 
@@ -76,7 +76,7 @@ dependencies {
 <details>
         <summary>Raw Jar</summary>
 
-1. Go to the [release page](https://github.com/Lyzev/Settings/releases).
+1. Go to the [release page](https://github.com/SchizoidDevelopment/kratos/releases).
 2. Download Settings-${version}.jar.
 3. Add the jar to your classpath.
 
@@ -140,6 +140,6 @@ the [Discord server](https://lyzev.github.io/discord). Our friendly members and 
 ### GitHub
 
 To ensure a prompt and effective resolution of bugs or to share your suggestions, please submit them through
-the [issue tracker](https://github.com/Lyzev/Settings/issues) of this repository. Kindly utilize the provided templates
+the [issue tracker](https://github.com/SchizoidDevelopment/kratos/issues) of this repository. Kindly utilize the provided templates
 and make sure to include all relevant details that would help us understand your issue better. Your cooperation is
 greatly appreciated.

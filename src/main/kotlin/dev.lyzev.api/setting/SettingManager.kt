@@ -1,12 +1,24 @@
 /*
- * Copyright (c) 2023. Settings
- * All rights reserved.
+ * This file is part of https://github.com/SchizoidDevelopment/kratos.
+ *
+ * Copyright (c) 2023-2025. Lyzev
+ *
+ * Kratos is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as published by
+ * the Free Software Foundation, version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * Kratos is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along with Kratos. If not, see <https://www.gnu.org/licenses/>.
  */
 
 package dev.lyzev.api.setting
 
 import kotlin.reflect.KClass
-import kotlin.reflect.jvm.jvmName
 
 /**
  * Singleton object responsible for managing settings.
@@ -37,11 +49,22 @@ object SettingManager {
     /**
      * Get a setting based on the provided container class name, setting class name, and setting name.
      *
+     * @param container The class of the settings container.
+     * @param type The class of the setting.
+     * @param name The name of the setting.
+     * @return The matching Setting object if found, otherwise null.
+     */
+    fun get(container: KClass<*>, type: KClass<*>, name: String): Setting<*>? =
+        settings.firstOrNull { it.container == container && it::class == type && it.name == name }
+
+    /**
+     * Get a setting based on the provided container class name, setting class name, and setting name.
+     *
      * @param container The fully qualified name of the container class.
      * @param type The fully qualified name of the setting class.
      * @param name The name of the setting.
      * @return The matching Setting object if found, otherwise null.
      */
     fun get(container: String, type: String, name: String): Setting<*>? =
-        settings.firstOrNull { it.container.jvmName == container && it::class.jvmName == type && it.name == name }
+        settings.firstOrNull { it.container.qualifiedName == container && it::class.qualifiedName == type && it.name == name }
 }

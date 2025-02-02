@@ -1,0 +1,16 @@
+name: Publish package to Maven Central
+
+on:
+  workflow_dispatch:
+jobs:
+  staging:
+    uses: ./.github/workflows/build.yml
+    with:
+      build-command: publishMavenPublicationToOSSRHRepository
+    permissions:
+      packages: write
+      contents: write
+    secrets:
+      GPG_KEY: ${{ secrets.GPG_KEY }}
+      MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME }}
+      MAVEN_PASSWORD: ${{ secrets.MAVEN_PASSWORD }}
