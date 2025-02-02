@@ -28,7 +28,7 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.ACTION_TOKEN }}
+          personal_token: ${{ secrets.ACTION_TOKEN }}
           publish_dir: ./build/dokkaHtmlOutput
           publish_branch: gh-pages
           destination_dir: ./
