@@ -142,5 +142,9 @@ Need help with minor concerns or have questions? Join our supportive community o
 
 For bugs or suggestions, please submit them via the [GitHub Issue Tracker](https://github.com/SchizoidDevelopment/kratos/issues). Kindly use the provided templates and include all relevant details to ensure we can resolve your issue quickly. Your cooperation is greatly appreciated!
 
+## Contribution Guidelines
+
+We welcome contributions from the community! Please read our [Contribution Guidelines](CONTRIBUTING.md) to get started.
+
 ---
 *Kratos is developed and maintained by Schizoid Development. Thank you for using Kratos!*
