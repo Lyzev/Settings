@@ -1,16 +1,33 @@
-<h1 align="center">Kratos</h1>
-
-<p align="center">A flexible Kotlin library for seamless management and tracking of customizable application settings. Simplify the process of integrating user-configurable options into your projects.</p>
-
 <div align="center">
-    <a href="https://lyzev.github.io/discord"><img src="https://img.shields.io/discord/610120595765723137?logo=discord" alt="Discord"/></a>
-    <br><br>
-    <img src="https://img.shields.io/github/last-commit/SchizoidDevelopment/kratos" alt="GitHub last commit"/>
-    <img src="https://img.shields.io/github/commit-activity/w/SchizoidDevelopment/kratos" alt="GitHub commit activity"/>
+    <img height="400" src=".idea/icon.png" alt="Icon of Kratos">
     <br>
-    <img src="https://img.shields.io/github/languages/code-size/SchizoidDevelopment/kratos" alt="GitHub code size in bytes"/>
-    <img src="https://img.shields.io/github/contributors/SchizoidDevelopment/kratos" alt="GitHub contributors"/>
+    <a href="https://github.com/SchizoidDevelopment/kratos">
+        <img src="https://wsrv.nl/?url=https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3.2.0/assets/cozy-minimal/available/github_vector.svg&w=100&h=100" alt="GitHub Repository">
+    </a>
+    <a href="https://central.sonatype.com/artifact/dev.lyzev.api/kratos">
+        <img src="https://wsrv.nl/?url=https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3.2.0/assets/cozy-minimal/available/maven-central_vector.svg&w=100&h=100" alt="Maven Central">
+    </a>
+    <a href="https://lyzev.dev/discord">
+        <img src="https://wsrv.nl/?url=https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy-minimal/social/discord-plural_vector.svg&w=100&h=100" alt="Discord">
+    </a>
+    <a href="https://schizoiddevelopment.github.io/kratos/">
+        <img src="https://wsrv.nl/?url=https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy-minimal/documentation/ghpages_vector.svg&w=100&h=100" alt="Documentation">
+    </a>
+    <a href="https://github.com/SchizoidDevelopment/kratos/pulls">
+        <img src="https://wsrv.nl/?url=https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3.2.0/assets/cozy-minimal/documentation/pull-requests_vector.svg&w=100&h=100" alt="Pull Requests">
+    </a>
+    <a href="https://github.com/SchizoidDevelopment/kratos/issues">
+        <img src="https://wsrv.nl/?url=https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3.2.0/assets/cozy-minimal/documentation/issues_vector.svg&w=100&h=100" alt="Issues">
+    </a>
 </div>
+
+
+# Kratos: Setting Management for Kotlin
+
+A flexible Kotlin library for seamless management and tracking of customizable application settings. Simplify the process of integrating user-configurable options into your projects.
+
+> [!TIP] 
+> Kratos is specifically designed for Kotlin and works best when used with Kotlin’s coding style. It’s strongly recommended to use it exclusively with Kotlin.
 
 ## Usage
 
@@ -18,10 +35,10 @@
 
 ### Import
 
-Replace `${version}` with the current version!
+Replace `${version}` with the latest version of Kratos!
 
 <details>
-        <summary>Gradle KTS</summary>
+    <summary>Gradle (KTS)</summary>
 
 ```kt
 repositories {
@@ -36,7 +53,7 @@ dependencies {
 </details>
 
 <details>
-        <summary>Gradle Groovy</summary>
+    <summary>Gradle (Groovy)</summary>
 
 ```groovy
 repositories {
@@ -51,30 +68,30 @@ dependencies {
 </details>
 
 <details>
-        <summary>Maven</summary>
+    <summary>Maven</summary>
 
 ```xml
 <dependencies>
-<dependency>
-    <groupId>dev.lyzev.api</groupId>
-    <artifactId>kratos</artifactId>
-    <version>${version}</version>
-</dependency>
+    <dependency>
+        <groupId>dev.lyzev.api</groupId>
+        <artifactId>kratos</artifactId>
+        <version>${version}</version>
+    </dependency>
 </dependencies>
 ```
 
 </details>
 
 <details>
-        <summary>Raw Jar</summary>
+    <summary>Raw Jar</summary>
 
-1. Go to the [Maven Central Repository](https://search.maven.org/artifact/dev.lyzev.api/kratos) and download the JAR file from the version you want.
-2. Add the JAR file to your project.
-3. Done!
+1. Visit the [Maven Central Repository](https://search.maven.org/artifact/dev.lyzev.api/kratos) and download the JAR file for the version you need.
+2. Add the downloaded JAR to your project.
+3. You're all set!
 
 </details>
 
-### Example
+### Example Usage
 
 ```kt
 import dev.lyzev.api.setting.Setting
@@ -98,8 +115,6 @@ object Test {
 }
 
 fun main() {
-    // Create an instance of TestSetting with initial values.
-
     // Print the initial value of the setting.
     println(Test.setting)
 
@@ -113,18 +128,17 @@ fun main() {
 
 ## Documentation
 
-You can find the documentation [here](https://schizoiddevelopment.github.io/kratos/).
+For detailed documentation, check out the full [Kratos Documentation](https://schizoiddevelopment.github.io/kratos/).
 
 ## Bugs and Suggestions
 
-### Discord
+### Discord Community
 
-For assistance with minor concerns, feel free to join our supportive community on
-the [Discord server](https://lyzev.dev/discord). Our friendly members and staff are ready to help you.
+Need help with minor concerns or have questions? Join our supportive community on the [Discord server](https://lyzev.dev/discord). Our friendly members and staff are here to assist you!
 
-### GitHub
+### GitHub Issues
 
-To ensure a prompt and effective resolution of bugs or to share your suggestions, please submit them through
-the [issue tracker](https://github.com/SchizoidDevelopment/kratos/issues) of this repository. Kindly utilize the provided templates
-and make sure to include all relevant details that would help us understand your issue better. Your cooperation is
-greatly appreciated.
+For bugs or suggestions, please submit them via the [GitHub Issue Tracker](https://github.com/SchizoidDevelopment/kratos/issues). Kindly use the provided templates and include all relevant details to ensure we can resolve your issue quickly. Your cooperation is greatly appreciated!
+
+---
+*Kratos is developed and maintained by Schizoid Development. Thank you for using Kratos!*
