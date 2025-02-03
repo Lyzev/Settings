@@ -31,9 +31,11 @@ A flexible Kotlin library for seamless management and tracking of customizable a
 
 ## Usage
 
-[![Maven Central Version](https://img.shields.io/maven-central/v/dev.lyzev.api/kratos)](https://central.sonatype.com/artifact/dev.lyzev.api/kratos)
+[![Maven Central](https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3.2.0/assets/cozy/available/maven-central_vector.svg)](https://central.sonatype.com/artifact/dev.lyzev.api/kratos)
 
 ### Import
+
+[![Maven Central Version](https://img.shields.io/maven-central/v/dev.lyzev.api/kratos)](https://central.sonatype.com/artifact/dev.lyzev.api/kratos)
 
 Replace `${version}` with the latest version of Kratos!
 
@@ -91,7 +93,7 @@ dependencies {
 
 </details>
 
-### Example Usage
+### Example
 
 ```kt
 import dev.lyzev.api.setting.Setting
