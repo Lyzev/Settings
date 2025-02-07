@@ -1,7 +1,3 @@
-import org.jetbrains.kotlin.gradle.dsl.JvmTarget
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-import java.net.URI
-
 /*
  * This file is part of https://github.com/SchizoidDevelopment/kratos.
  *
@@ -17,8 +13,12 @@ import java.net.URI
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU Affero General Public License for more details.
  *
- * You should have received a copy of the GNU General Public License along with Kratos. If not, see <https://www.gnu.org/licenses/>.
+ * You should have received a copy of the GNU General Public License along with Kratos. If not, see https://www.gnu.org/licenses/agpl-3.0.en.html.
  */
+
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+import java.net.URI
 
 plugins {
     alias(libs.plugins.kotlin)
