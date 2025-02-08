@@ -14,12 +14,15 @@ and improving the code.
 
 #### Reporting Bugs
 
-If you find a bug, please report it by creating a new issue on [the project's issue tracker](https://github.com/SchizoidDevelopment/kratos/issues). Be sure to include a
+If you find a bug, please report it by creating a new issue
+on [the project's issue tracker](https://github.com/SchizoidDevelopment/kratos/issues). Be sure to include a
 clear and concise description of the issue, as well as steps to reproduce it.
 
 #### Suggesting Features
 
-If you have a great idea for a new feature, please let us know by creating a new issue on [the project's issue tracker](https://github.com/SchizoidDevelopment/kratos/issues). Be sure to include a clear and concise description of the feature, and explain why you think it would be
+If you have a great idea for a new feature, please let us know by creating a new issue
+on [the project's issue tracker](https://github.com/SchizoidDevelopment/kratos/issues). Be sure to include a clear and
+concise description of the feature, and explain why you think it would be
 valuable to the project.
 
 ### Writing Code
@@ -35,7 +38,10 @@ If you are interested in contributing code to the project, here are a few things
 
 #### License and Copyright
 
-By contributing to this project, you agree that your contributions will be licensed under the GNU Affero General Public License v3.0 (AGPL-3.0). This ensures that the project remains free and open-source, and that any derivative works are also shared under the same license. Additionally, you confirm that the code you commit is your own work or you have the right to submit it.
+By contributing to this project, you agree that your contributions will be licensed under the GNU Affero General Public
+License v3.0 (AGPL-3.0). This ensures that the project remains free and open-source, and that any derivative works are
+also shared under the same license. Additionally, you confirm that the code you commit is your own work or you have the
+right to submit it.
 
 For more details, please refer to the [AGPL-3.0 license](https://www.gnu.org/licenses/agpl-3.0.en.html).
 
@@ -50,7 +56,8 @@ When contributing code, please follow the project's coding style and conventions
 
 ## Code of Conduct
 
-By participating in this project, you agree to follow [the project's code of conduct](CODE_OF_CONDUCT.md). This includes treating all
+By participating in this project, you agree to follow [the project's code of conduct](CODE_OF_CONDUCT.md). This includes
+treating all
 contributors with respect and refraining from any form of harassment or discrimination.
 
 ## Get in Touch

@@ -25,7 +25,9 @@ import kotlin.reflect.KClass
  */
 object SettingManager {
 
-    // A mutable set to store all registered settings.
+    /**
+     * A mutable set to store all registered settings.
+     */
     val settings = mutableSetOf<Setting<*>>()
 
     /**

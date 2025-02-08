@@ -74,15 +74,15 @@ class SettingTests {
     @Test
     fun `test setting manager get by container class`() {
         val setting = BooleanSetting(this::class, "test", true)
-        val settings = SettingManager[this::class]
-        assertTrue(settings.contains(setting))
+        val retrievedSettings = SettingManager[this::class]
+        assertTrue(retrievedSettings.contains(setting))
     }
 
     @Test
     fun `test setting manager get by container class and name`() {
         val setting = BooleanSetting(this::class, "test", true)
-        val settings = SettingManager[this::class, "test"]
-        assertTrue(settings.contains(setting))
+        val retrievedSettings = SettingManager[this::class, "test"]
+        assertTrue(retrievedSettings.contains(setting))
     }
 
     @Test
@@ -96,7 +96,11 @@ class SettingTests {
     @Test
     fun `test setting manager get by container and type`() {
         val setting = BooleanSetting(this::class, "test", true)
-        val retrievedSetting = SettingManager.get("dev.lyzev.api.setting.test.SettingTests", "dev.lyzev.api.setting.test.BooleanSetting", "test")
+        val retrievedSetting = SettingManager.get(
+            "dev.lyzev.api.setting.test.SettingTests",
+            "dev.lyzev.api.setting.test.BooleanSetting",
+            "test"
+        )
         assertNotNull(retrievedSetting)
         assertEquals(setting, retrievedSetting)
     }

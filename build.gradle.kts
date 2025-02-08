@@ -58,19 +58,20 @@ val javadocJar by tasks.registering(Jar::class) {
 }
 
 dokka {
-    moduleName.set("Kratos")
+    moduleName = "Kratos"
     dokkaSourceSets.main {
+        includes.from("MODULE.md")
         sourceLink {
-            localDirectory.set(file("src/main/kotlin"))
+            localDirectory = file("src/main/kotlin")
             remoteUrl("https://github.com/SchizoidDevelopment/kratos/tree/master/src/main/kotlin")
-            remoteLineSuffix.set("#L")
+            remoteLineSuffix = "#L"
         }
     }
     pluginsConfiguration.html {
-        footerMessage.set("Copyright (c) 2023-2025. Lyzev")
+        footerMessage = "Copyright (c) 2023-2025. Lyzev"
     }
     dokkaPublications.html {
-        outputDirectory.set(layout.buildDirectory.dir("dokkaHtmlOutput"))
+        outputDirectory = layout.buildDirectory.dir("dokkaHtmlOutput")
     }
 }
 
@@ -88,7 +89,11 @@ tasks.register("publishToMavenCentral") {
             commandLine("sh", "-c", "cd build/repo && zip -r ../../build.zip ./*")
         }
         exec {
-            commandLine("sh", "-c", "curl --request POST --verbose --header 'Authorization: Bearer ${System.getenv("MAVEN_USER_TOKEN")}' --form bundle=@build.zip https://central.sonatype.com/api/v1/publisher/upload")
+            commandLine(
+                "sh",
+                "-c",
+                "curl --request POST --verbose --header 'Authorization: Bearer ${System.getenv("MAVEN_USER_TOKEN")}' --form bundle=@build.zip https://central.sonatype.com/api/v1/publisher/upload"
+            )
         }
     }
 }
@@ -114,7 +119,8 @@ publishing {
             artifact(javadocJar.get())
             pom {
                 name = "Kratos"
-                description = "A flexible Kotlin library for seamless management and tracking of customizable application settings. Simplify the process of integrating user-configurable options into your projects."
+                description =
+                    "A flexible Kotlin library for seamless management and tracking of customizable application settings. Simplify the process of integrating user-configurable options into your projects."
                 url = "https://github.com/SchizoidDevelopment/kratos"
                 licenses {
                     license {
